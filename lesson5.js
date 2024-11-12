@@ -34,7 +34,7 @@ function searchByYear()
 }
 function mytable(d)
 {    
-    document.getElementById("t").innerHTML+="<tr>"+"<td>"+d.title+"</td>"+"<td>"+d.artist+"</td>"+"<td>"+d.country+"</td>"+"<td>"+d.company+"</td>"+"<td>"+d.price+"</td>"+"<td>"+d.year+"</td>"+"</tr>"; 
+    document.getElementById("t").innerHTML+="<tr>"+"<td>"+d.title+"</td>"+"<td>"+d.artist+"</td>"+"<td>"+d.country+"</td>"+"<td>"+d.company+"</td>"+"<td>"+d.price+"</td>"+"<td>"+d.year+"</td>"+"<td>"+d.id+"</td>"+"</tr>"; 
 }
 
 function add()
@@ -57,7 +57,14 @@ function add()
     document.getElementById("price").value=" "
     document.getElementById("year").value=" "
 }
-
+function remove()
+{
+    const id=document.getElementById('r').value;
+    const cd=catalog.findIndex(x=>x.id==id);
+    catalog.splice(cd,1);
+    alert("הפריט נמחק")
+    document.getElementById("t")+="";
+}
 
 
 
