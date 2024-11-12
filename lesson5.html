@@ -7,18 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <label>כתוב את שם הדיסק</label>
+    <label>כתוב את שם הדיסק</label><br> 
     <input type="text" id="cd_name" onkeydown="searchByName()">    
-    <br>
-    <p id="showByName"></p>
-    <select name="countries" id="cd_country" onchange="searchByCountry()">
-
-    </select>
-    <p id="showByCountry"></p>
+    <br>    
+    <select name="countries" id="cd_country" onchange="searchByCountry()">  </select><br>     
     <input type="text" id="from">-
     <input type="text" id="to">
-    <input type="button" value="סנן" onclick="searchByYear()">
-    <p id="showByYear"></p>
+    <input type="button" value="סנן" onclick="searchByYear()">    
+    <p id="p1"></p>
+    <br>
+    title<br> 
+    <input type="text" id="title">
+    <br> 
+    artist<br> <input type="text" id="artist"><br> 
+    country<br> <input type="text" id="country"><br> 
+    company<br> <input type="text" id="company"><br> 
+    price<br> <input type="number" id="price"><br> 
+    year<br> <input type="number" id="year"><br> 
+    <input type="button" value="add" onclick="add()">
+
     <table id="t"></table>
     <script src="./cd_array.js"></script>
     <script src="./lesson5.js"></script>
