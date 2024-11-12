@@ -29,7 +29,14 @@ function searchByCountry(){
     }
     document.getElementById('showByCountry').innerHTML=st;
 }
-
+function searchByYear()
+{
+    let f=document.getElementById('from').value;
+    let t=document.getElementById('to').value;    
+    const c=catalog.find(x=>x.year>=f && x.year<=t);
+    let st=c.title+" "+c.year;
+    document.getElementById('showByYear').innerHTML=st;
+}
 
 
 
