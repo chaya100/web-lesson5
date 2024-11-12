@@ -10,7 +10,16 @@ function searchByName()
     }
     document.getElementById('showByName').innerHTML=st;
 }
-function searchByCountry(){
+let arr =catalog.reduce((prev,cur)=>{
+    if(!prev.includes(cur.country))
+        prev.push(cur.country)
+    return prev;    
+},[]).sort();
+for (const item of arr) {
+    document.getElementById('cd_country').innerHTML+="<option>"+item+"</option>";
+}
+
+function searchByCountry(){    
     let st="";
     let country=document.getElementById("cd_country").value;
     const c=catalog.filter(x=>x.country==country);
